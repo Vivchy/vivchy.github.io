@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Request</title>
+</head>
+<!--
+    Заголовок
+    описание 
+    код
+    гит 
+    ссылки
+
+ -->
+<body>
+    <div class="container">
+        <a href="../index.html">home</a>
+        <h1>Request</h1>
+        <div>
+            <h2>Описание</h2>
+            <p>
+                Пакет <b>requests</b> для взаимодействия с веб-ресурсами посредством HTTP запросов. 
+                Он позволяет выполнять запросы типа GET, POST, PUT, DELETE и другие, 
+                а также управлять заголовками, параметрами запроса, данными форм и многим другим.
+            </p>
+        </div>
+
+        <div>
+            <h2>
+                Код
+            </h2>
+        <pre>
+import requests 
+
+headers = {
+    "Accept": "*/*",
+    "User-Agent": "Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) 
+    AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1"
+}
+
+url = "https://example.ru"
+
+req = requests.get(url, headers=headers)
+src = req.text
+        </pre>
+<p>headers повышает шанс проверки сервера на робота парсера и обхода блокировки.</p>
+<p>Обычно испльзуется в связке с BeautifulSoup и selenium</p>
+        </div>
+
+        <div>
+            <h2>
+                Git
+            </h2>
+            <p><a href="https://github.com/Vivchy/parser_xml/blob/master/parsmod.py" target="_blank">Получение страниц в цикле для парсинга данных</a></p>
+        </div>
+        <div>
+            <h2>
+                Ссылки
+            </h2>
+            <a href="https://pythonru.com/biblioteki/kratkoe-rukovodstvo-po-biblioteke-python-requests" target="_blank">Краткое руководство по библиотеке Python Requests</a><br>
+            <a href="https://pypi.org/project/requests/" target="_blank">pypi requests</a>
+        </div>
+    </div>
+
+</body>
+</html>
