@@ -6,31 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Пример страницы</title>
+    <title>Docker python</title>
 </head>
 <body>
     <div class="container">
         <a href="../index.html">home</a>
-        <h1>Пример страницы</h1>
+        <h1>Docker python</h1>
         <div>
             <h2>Описание</h2>
             <p>
-                to do
+                Простой пример создания контейнера для запуска скрипта с контейнере.
             </p>
+            <p><a href="https://www.digitalocean.com/community/tutorials/docker-ubuntu-18-04-1-ru" target="_blank">установка docker</a><br>
+            <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-ru" target="_blank">установка docker-compose</a></p>
         </div>
 
         <div>
             <h2>
                 Код
             </h2>
-        to do
+<pre>
+FROM python:3.9
+
+WORKDIR /app
+    
+COPY requirements.txt .
+    
+RUN pip install -r requirements.txt
+    
+COPY . .
+    
+CMD ["python", "main.py"]
+    </pre>
+    <p>создание контейнера и его запуск</p>
+<pre>
+docker build -t python-app
+docker run python-app
+</pre>
         </div>
 
         <div>
             <h2>
                 Git
             </h2>
-            to do
+            <p><a href="https://github.com/Vivchy/Deploy_python_docker/tree/main" target="_blank">simple python docker</a><br>
+            <a href="https://gitlab.com/Vivchy/ci_cd_telegram_docker" target="_blank">docker ci/cd</a></p>
         </div>
         <div>
             <h2>
